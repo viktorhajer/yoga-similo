@@ -1,0 +1,28 @@
+.content {
+  color: #ffffff;
+  text-shadow: 3px 2px 3px rgb(0 0 0 / 12%);
+  padding: 40px;
+
+  h1 {
+    font-weight: 500;
+    font-size: 36px;
+    margin-bottom: 2px;
+  }
+  p {
+    max-width: 500px;
+  }
+}
+
+.cards-container {
+  width: calc(100vw - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  app-card {
+    float: left;
+  }
+  .delimiter {
+    clear: both;
+  }
+}

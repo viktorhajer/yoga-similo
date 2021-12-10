@@ -1,0 +1,50 @@
+
+.card {
+  width: 150px;
+  height: 231px;
+  background: #fff;
+  margin: 14px 12px;
+  border-radius: 10px;
+  box-shadow: 4px 3px 3px rgb(0 0 0 / 20%);
+  color: #000;
+  text-shadow: none;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+  transition: all 200ms ease-out;
+  cursor: pointer;
+
+  .image {
+    height: 140px;
+    transition: all 200ms ease-out;
+  }
+  label {
+    font-size: 12px;
+    transition: all 200ms ease-out;
+  }
+  span {
+    font-size: 10px;
+    transition: all 200ms ease-out;
+  }
+
+}
+
+.active:hover {
+  width: 170px;
+  height: 262px;
+  box-shadow: 10px 10px 40px rgb(0 0 0 / 20%);
+  transform: rotate(4deg);
+  margin: -2px 2px;
+
+  label {
+    font-size: 14px;
+  }
+  span {
+    font-size: 12px;
+  }
+
+}
