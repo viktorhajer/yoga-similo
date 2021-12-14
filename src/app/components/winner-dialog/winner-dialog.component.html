@@ -1,0 +1,10 @@
+<div class="dialog-content" (click)="close()">
+  <img src="/assets/om.jpg">
+  <h2>Gratulálok!</h2>
+  <p class="level" *ngIf="data.stat.level === 0">&#9679;</p>
+  <p class="level" *ngIf="data.stat.level === 1">&#9679;&#9679;</p>
+  <p class="level" *ngIf="data.stat.level === 2">&#9679;&#9679;&#9679;</p>
+  <p class="level" *ngIf="data.stat.level === 3">&#9733;</p>
+  <p class="time"><ng-container *ngIf="minutes">{{ minutes }} perc </ng-container>{{ seconds }} másodperc</p>
+  <p class="steps">{{ data.stat.step }} lépés</p>
+</div>

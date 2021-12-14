@@ -1,7 +1,9 @@
-<div class="card" [class.active]="active">
-  <ng-container *ngIf="active">
-    <div class="image"></div>
-    <label>{{card.title}}</label>
-    <span>{{card.title}}</span>
-  </ng-container>
+<div class="cards-container">
+  <div class="card" [class.highlighted]="highlighted" [class.done]="done">
+    <div class="back {{card.image}} asana-card" [class.hidden]="!highlighted && !done">
+    </div>
+    <div class="front bg-cover_2 asana-card" [class.hidden]="highlighted || done">
+    </div>
+  </div>
 </div>
+

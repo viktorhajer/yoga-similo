@@ -7,6 +7,7 @@ import {Card} from '../../model/card.model';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
-  @Input() card: Card = {title: ''};
-  @Input() active = true;
+  @Input() card: Card = null as any;
+  @Input() highlighted = false;
+  @Input() done = false;
 }

@@ -1,22 +1,19 @@
 :root {
-  --spinner_c01: #B8D430;
-  --spinner_c02: #3AB745;
-  --spinner_c03: #20a39b;
-  --spinner_c04: #41afd9;
-  --spinner_c05: #6361bb;
-  --spinner_c06: #a375bb;
-  --spinner_c07: #CC0071;
-  --spinner_c08: #F80120;
-  --spinner_c09: #F35B20;
-  --spinner_c10: #FB9A00;
-  --spinner_c11: #FFCC00;
-  --spinner_c12: #FEF200;
+  --action-space: 10px;
+  --content-padding: 20px;
+  --card-size: 150px;
+  --card-margin: 10px;
+  --card-imaga-scale: 0.7;
 }
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-body { display: flex; flex-flow: row; background: linear-gradient(#66b095, #80c09a, #3990cb, #0a2c59); }
+body {
+  display: flex;
+  flex-flow: row;
+  background: #3e3d4e;
+}
 
 .mat-slider-thumb-label {
   transform: rotate(45deg) !important;
@@ -34,9 +31,11 @@ body { display: flex; flex-flow: row; background: linear-gradient(#66b095, #80c0
   }
 }
 @media (max-width: 900px) {
-  .full-modal {
-    max-width: unset !important;
-    width: 100%;
-    height: 100%;
+  :root {
+    --action-space: 5px;
+    --content-padding: 5px;
+    --card-size: 100px;
+    --card-margin: 5px;
+    --card-imaga-scale: 0.48;
   }
 }
