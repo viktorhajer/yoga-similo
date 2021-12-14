@@ -66,6 +66,10 @@ export class AppComponent {
     }
   }
 
+  getEncodedURL(): string {
+    return encodeURIComponent(window.location.origin + window.location.pathname);
+  }
+
   private checkResult() {
     if (!!this.selected1.id && this.selected1.title === this.selected2.title) {
       this.blocked = true;
