@@ -10,7 +10,9 @@
   </div>
   <div class="cards-container">
     <ng-container *ngFor="let card of randomCards, let i = index">
-      <app-card [card]="card" [done]="isDone(card.id)" [highlighted]="isHighlighted(card.id)" (click)="select(card)"></app-card>
+      <app-card [card]="card" [done]="isDone(card.id)" [highlighted]="isHighlighted(card.id)" [cheat]="cheat"
+                (click)="select(card)"></app-card>
     </ng-container>
   </div>
 </div>
+<div class="cheat-box" (mousedown)="cheat = true" (mouseup)="cheat = false" (mouseleave)="cheat = false">#</div>

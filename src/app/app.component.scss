@@ -32,3 +32,11 @@
     float: left;
   }
 }
+
+.cheat-box {
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}

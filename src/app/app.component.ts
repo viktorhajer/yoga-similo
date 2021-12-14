@@ -19,6 +19,7 @@ export class AppComponent {
   stat = new Stat();
   randomCards: Card[] = [];
   level = 1;
+  cheat = false;
 
   constructor(private readonly dialogService: DialogService) {
     this.start();
@@ -81,7 +82,7 @@ export class AppComponent {
           this.stat.finish();
           this.dialogService.winner(this.stat);
         }
-      }, 500);
+      }, 800);
     }
   }
 

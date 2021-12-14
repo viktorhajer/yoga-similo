@@ -1,8 +1,8 @@
 <div class="cards-container">
   <div class="card" [class.highlighted]="highlighted" [class.done]="done">
-    <div class="back {{card.image}} asana-card" [class.hidden]="!highlighted && !done">
+    <div class="back {{card.image}} asana-card" [class.hidden]="!highlighted && !done" [class.cheat]="cheat">
     </div>
-    <div class="front bg-cover_2 asana-card" [class.hidden]="highlighted || done">
+    <div class="front bg-cover_2 asana-card" [class.hidden]="highlighted || done" [class.cheat]="cheat">
     </div>
   </div>
 </div>

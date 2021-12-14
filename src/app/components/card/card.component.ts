@@ -10,4 +10,5 @@ export class CardComponent {
   @Input() card: Card = null as any;
   @Input() highlighted = false;
   @Input() done = false;
+  @Input() cheat = false;
 }

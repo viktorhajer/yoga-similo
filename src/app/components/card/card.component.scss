@@ -20,12 +20,17 @@
   cursor: pointer;
   position: absolute;
   border: 1px solid rgb(0 0 0 / 20%);
+  transform: scale(1) rotate(0deg);
 
   &.highlighted {
     box-shadow: 10px 10px 30px rgb(0 0 0 / 70%);
-    transform: scale(1.25) rotate(9deg);
+    transform: scale(1.2) rotate(-6deg);
     border: 1px solid rgb(0 0 0 / 30%);
     z-index: 1;
+    animation-name: card-moving;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+    animation-delay: 200ms;
   }
 
   &.done {
@@ -44,9 +49,30 @@
   }
 }
 
+.back.cheat {
+  opacity: 0.6;
+  filter: blur(1px);
+}
+
+.front.cheat {
+  opacity: 0.2;
+}
+
 .asana-card {
   width: 200px;
   height: 200px;
   transform: scale(var(--card-imaga-scale));
   border-radius: 10px;
+}
+
+@keyframes card-moving {
+  0% {
+    transform: scale(1.2) rotate(-6deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(6deg);
+  }
+  100% {
+    transform: scale(1.2) rotate(-6deg);
+  }
 }
