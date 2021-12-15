@@ -8,12 +8,14 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {WinnerDialogComponent} from './components/winner-dialog/winner-dialog.component';
 import {CardComponent} from './components/card/card.component';
 import {MatButtonModule} from '@angular/material/button';
+import {SafeUrlPipe} from './components/safeurl.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    WinnerDialogComponent
+    WinnerDialogComponent,
+    SafeUrlPipe
   ],
   imports: [
     CommonModule,

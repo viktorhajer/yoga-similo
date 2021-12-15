@@ -38,7 +38,8 @@ export class AppComponent {
       }
     }
     for (let i = 0; i < randomNums.length; i++) {
-      this.randomCards[i] = {id: i+'', title: cards[randomNums[i]].title, image: cards[randomNums[i]].image};
+      this.randomCards[i] = {id: i+'', title: cards[randomNums[i]].title,
+        image: cards[randomNums[i]].image, link: cards[randomNums[i]].link};
     }
   }
 
@@ -64,6 +65,12 @@ export class AppComponent {
         this.selected2 = card;
         this.checkResult();
       }
+    } else if (this.isDone(card.id)) {
+      // open
+      const a = document.createElement('a');
+      a.href = card.link;
+      a.target = '_blank';
+      a.click();
     }
   }
 
