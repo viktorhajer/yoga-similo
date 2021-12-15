@@ -38,8 +38,10 @@ export class AppComponent {
       }
     }
     for (let i = 0; i < randomNums.length; i++) {
-      this.randomCards[i] = {id: i+'', title: cards[randomNums[i]].title,
-        image: cards[randomNums[i]].image, link: cards[randomNums[i]].link};
+      this.randomCards[i] = {
+        id: i + '', title: cards[randomNums[i]].title,
+        image: cards[randomNums[i]].image, link: cards[randomNums[i]].link
+      };
     }
   }
 
@@ -74,10 +76,6 @@ export class AppComponent {
     }
   }
 
-  getEncodedURL(): string {
-    return encodeURIComponent(window.location.origin + window.location.pathname);
-  }
-
   private checkResult() {
     if (!!this.selected1.id && this.selected1.title === this.selected2.title) {
       this.blocked = true;
@@ -98,7 +96,7 @@ export class AppComponent {
     this.selected2 = new Card();
   }
 
-  private clearAll(){
+  private clearAll() {
     this.clearSelected();
     this.randomCards = [];
     this.stat = new Stat();

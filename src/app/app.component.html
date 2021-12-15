@@ -4,9 +4,6 @@
     <button mat-raised-button (click)="start(1)" [class.active]="level === 1">&#9871;</button>
     <button mat-raised-button (click)="start(2)" [class.active]="level === 2">&#9869;</button>
     <button mat-raised-button (click)="start(3)" [class.active]="level === 3">&#9868;</button>
-    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{getEncodedURL()}}&amp;src=sdkpreparse">
-      <button mat-raised-button>&#9733;</button>
-    </a>
   </div>
   <div class="cards-container">
     <ng-container *ngFor="let card of randomCards, let i = index">
